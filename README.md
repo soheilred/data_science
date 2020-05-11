@@ -22,6 +22,7 @@ For evaluation, some well-known classification metrics such as *f1-score* and *c
 * seaborn 
 * matplotlib
 * tqdm
+* netwrokx
 
 Please make sure to have `punkt` and `stopwords` submodules from nltk library installed. If you don't, you can install it using
 ```
