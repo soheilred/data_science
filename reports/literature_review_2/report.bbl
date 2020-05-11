@@ -1,0 +1,32 @@
+\begin{thebibliography}{1}
+
+\bibitem{Garigliotti_2017}
+Darío Garigliotti and Krisztian Balog.
+\newblock On type-aware entity retrieval.
+\newblock {\em Proceedings of the ACM SIGIR International Conference on Theory
+  of Information Retrieval - ICTIR ’17}, 2017.
+
+\bibitem{faegheh}
+Faegheh Hasibi, Krisztian Balog, and Svein~Erik Bratsberg.
+\newblock Exploiting entity linking in queries for entity retrieval.
+\newblock In {\em Proceedings of the 2016 ACM International Conference on the
+  Theory of Information Retrieval}, ICTIR ’16, page 209–218, New York, NY,
+  USA, 2016. Association for Computing Machinery.
+
+\bibitem{concept_feedback}
+Alexander Kotov and ChengXiang Zhai.
+\newblock Tapping into knowledge base for concept feedback: Leveraging
+  conceptnet to improve search results for difficult queries.
+\newblock In {\em Proceedings of the Fifth ACM International Conference on Web
+  Search and Data Mining}, WSDM ’12, page 403–412, New York, NY, USA, 2012.
+  Association for Computing Machinery.
+
+\bibitem{openie}
+Nikita Zhiltsov, Alexander Kotov, and Fedor Nikolaev.
+\newblock Fielded sequential dependence model for ad-hoc entity retrieval in
+  the web of data.
+\newblock In {\em Proceedings of the 38th International ACM SIGIR Conference on
+  Research and Development in Information Retrieval}, SIGIR ’15, page
+  253–262, New York, NY, USA, 2015. Association for Computing Machinery.
+
+\end{thebibliography}

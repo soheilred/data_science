@@ -1,0 +1,31 @@
+\begin{thebibliography}{1}
+
+\bibitem{cheng-2013}
+Xiao Cheng and Dan Roth.
+\newblock Relational inference for wikification.
+\newblock In {\em Proceedings of the 2013 Conference on Empirical Methods in
+  Natural Language Processing}, pages 1787--1796, Seattle, Washington, USA,
+  October 2013. Association for Computational Linguistics.
+
+\bibitem{tagme}
+Paolo Ferragina and Ugo Scaiella.
+\newblock Tagme: On-the-fly annotation of short text fragments (by wikipedia
+  entities).
+\newblock In {\em Proceedings of the 19th ACM International Conference on
+  Information and Knowledge Management}, CIKM ’10, page 1625–1628, New
+  York, NY, USA, 2010. Association for Computing Machinery.
+
+\bibitem{dbpedia}
+Pablo~N Mendes, Max Jakob, Andr{\'e}s Garc{\'\i}a-Silva, and Christian Bizer.
+\newblock Dbpedia spotlight: shedding light on the web of documents.
+\newblock In {\em Proceedings of the 7th international conference on semantic
+  systems}, pages 1--8, 2011.
+
+\bibitem{entity}
+W.~{Shen}, J.~{Wang}, and J.~{Han}.
+\newblock Entity linking with a knowledge base: Issues, techniques, and
+  solutions.
+\newblock {\em IEEE Transactions on Knowledge and Data Engineering},
+  27(2):443--460, Feb 2015.
+
+\end{thebibliography}

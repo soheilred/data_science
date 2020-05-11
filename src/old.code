@@ -1,0 +1,60 @@
+
+    # html = urllib.request.urlopen('https://www.law.cornell.edu/supremecourt/text/418/683').read()
+    # soup = BeautifulSoup(html, 'html.parser')
+    # text = ''.join([t for t in soup.find_all(text=True) if t.parent.name == 'p' and len(t) >= 25])
+
+
+    
+    # mychains = list()
+    # chains = ann.corefChain
+    # for chain in chains:
+    #     mychain = list()
+    #     # Loop through every mention of this chain
+    #     for mention in chain.mention:
+    #         # Get the sentence in which this mention is located, and get the words which are part of this mention
+    #         # (we can have more than one word, for example, a mention can be a pronoun like "he", but also a compound noun like "His wife Michelle")
+    #         words_list = ann.sentence[mention.sentenceIndex].token[mention.beginIndex:mention.endIndex]
+    #         #build a string out of the words of this mention
+    #         ment_word = ' '.join([x.word for x in words_list])
+    #         mychain.append(ment_word)
+    #     mychains.append(mychain)
+
+    # for chain in mychains:
+    #     print(' <-> '.join(chain))
+    
+    # save the annotated file
+    # import pickle
+    # file = open('../data/annotation', 'wb')
+    # pickle.dump(ann, file)
+    # file.close()
+
+    # # Iterate over all tokens in all sentences, and print out the word, lemma, pos and ner tags
+    # for i, sent in enumerate(ann.sentence):
+    #     print("[Sentence {}]".format(i+1))
+    #     for t in sent.token:
+    #         print("{:12s}\t{:12s}\t{:6s}\t{}".format(t.word, t.lemma, t.pos, t.ner))
+    #     print("")
+
+    # # Iterate over all detected entity mentions
+    # print("{:30s}\t{}".format("Mention", "Type"))
+
+    # for sent in ann.sentence:
+    #     for m in sent.mentions:
+    #         print("{:30s}\t{}".format(m.entityMentionText, m.entityType))
+
+
+
+    # # check if java is still running
+    # # !ps -o pid,cmd | grep java
+
+    # en_nlp = stanza.Pipeline(lang='en', processors='tokenize,ner')
+    # # en_nlp = stanza.Pipeline('en')
+    # en_doc = en_nlp("Barack Obama was born in Hawaii.  He was elected president in 2008.")
+    # print(*[f'token: {token.text}\tner: {token.ner}' for sent in en_doc.sentences for token in sent.tokens], sep='\n')
+    # # for i, sent in enumerate(en_doc.sentences):
+    # #     print("[Sentence {}]".format(i+1))
+    # #     for word in sent.words:
+    # #         print("{:12s}\t{:12s}\t{:6s}\t{:d}\t{:12s}".format(\
+    # #             word.text, word.lemma, word.pos, word.head, word.deprel))
+    # #     print("")
+

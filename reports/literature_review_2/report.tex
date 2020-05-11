@@ -1,0 +1,224 @@
+\documentclass[letterpaper]{article}
+%\usepackage{times}
+%\usepackage{helvet}
+%\usepackage{courier}
+\usepackage{cite}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage[bottom]{footmisc}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{mathtools}
+\usepackage{array}
+\usepackage{color}
+% algorithms
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+
+%===================================
+% margins
+\usepackage{geometry}
+%\geometry{
+%	letterpaper,
+%	right=20mm,
+%	left=20mm,
+%	top=10mm,
+%	bottom=20mm
+%}
+\usepackage[pdftex,
+ pdfauthor=Soheil Gharatappeh,
+ pdftitle={Apprenticeship Learning Approach to Inverse Reinforcement Learning},
+ pdfsubject={Sample document with blind text},
+ pdfkeywords={hyperref, PDF meta information},
+ pdfproducer=TeXShop,
+ pdfcreator=pdflatex]{hyperref}
+
+%============ FUNCTIONS =============
+\newcommand{\valatrisk}[2]{\operatorname{VaR}_{#1}(#2)}
+\newcommand{\cvalatrisk}[2]{\operatorname{CVaR}_{#1}(#2)}
+\newcommand{\norm}[2]{{\Vert{#1}\Vert}_{#2}}
+
+\newenvironment{mprog}{\begin{array}{>{\displaystyle}l>{\displaystyle}l>{\displaystyle}l}}{\end{array}}
+\newcommand{\cs}{\\[1ex] & }
+\newcommand{\stc}{\\[1ex] \mbox{s.t.} &}
+\newcommand{\minimize}[1]{\min_{#1} &}
+\newcommand{\maximize}[1]{\max_{#1} &}
+
+\newcommand{\tr}{^{\mathsf{T}}}
+\newcommand{\zero}{\mathbf{0}}
+\newcommand{\st}{\quad\text{s.t.}\quad}
+%===================================
+
+\newcommand{\eye}{\mathbf{I}}
+\newcommand{\one}{\mathbf{1}}
+\newcommand{\marek}[1]{\textcolor{red}{[#1]}}
+
+\frenchspacing
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+\pdfinfo{
+/Title (Predicting Death In Game of Thrones)
+/Author (Soheil Gharatappeh)}
+\setcounter{secnumdepth}{0}  
+
+\title{Predicting Death In Game of Thrones}
+\author{Soheil Gharatappeh}
+
+\begin{document}
+\maketitle
+	
+	
+% \begin{abstract}
+% \begin{quote}
+
+% \end{quote}
+% \end{abstract}
+
+\section{Main Paper}
+
+In \cite{openie} Zhiltsov et at. discuss entity retrieval in the web of data (ERWD), using multi-fielded entity representation. The idea is to incorporate term dependencies into the task of document retrieval in a collection of structured documents. It is known that retrieval models, such as bigram, ordered and un-ordered n-grams, that use dependencies in query terms are more accurate in case of longer queries. Retrieval models such as Markov Random Field (MRF) represent a query using a graph of dependencies between the query terms and employ bigram, ordered or un-ordered base relationships between the terms, and calculates the score of each document as a linear combination of potential functions. Also, Sequential Dependence Model (SDM), which is based on MRF, assumes sequential dependencies for the query terms in the form of unigram, ordered or un-ordered bigram. These methods improve the quality of entity representation. However, in order to improve the retrieval models, Fielded Sequential Dependence Model (FSDM) is proposed, which generalizes and guaranties sequential dependence, especially in structured documents. It is also suggested that using a five-field entity representation scheme we can improve the quality of entity representation and the semantic relation between them.
+
+This approach is evaluated in comparison to available benchmarks for ERWD such as MLM-CA(mixture of language models coordinate accent) and SDM-CA, and other well-known methods such as LM, BM25, PRMS, etc. by using four different query sets. This work is evaluated in terms of MAP, Precision at 10, Precision at 20, and b-pref. The results suggest an overall improvement in almost all of the cases across different query sets.
+
+
+\section{1st Paper}
+
+In \cite{concept_feedback}, Kotov et at. study Query Expansion; a very common technique for improving web search results. The idea is to exploit the graph-based representation of ConceptNet knowledge base in order to enrich the lexico-semantic relations between terms. Query expantion, especially in case of difficult queries, can be improved using related concepts obtained from ConceptNet. The related concepts enable us to represent complex and multi-step inferences between concepts more efficiently. From the whole set of related expansion queries, a subset of more related ones can be chosen automatically using different Machine Learning or heuristic tools in order to increase the efficiency of the retrieval problem. The results suggests that employing learning-based expansion methods leads to improved retrieval results by adding truely related concepts around the difficult query.
+
+
+\section{2nd Paper}
+
+Garigliotti in \cite{Garigliotti_2017} talks about entity retrieval, the task of returning entity from a knowledge base. The idea is to improve the performance of entity retrieval by employing information about the type of entities. They studied various type taxonomy frameworks from different knowledge bases such as Wikipedia, Dbpedia, Yago and Freebase. Both term based and type based similarities are employed in order to formulate a probabilistic retrieval approach. This formulation and a "target type oracle" that always gives the correct target type for a given query is used to evaluate the retrieval model against a term-based baseline approach in terms of MAP metric. The results suggest that the type aware retrieval performed best when used with a large type taxonomy such as Wikipedia with very specific types.
+
+
+\section{3rd Paper}
+
+Hasibi et al. in \cite{faegheh} proposed an the novel idea of using entity linking in the task of entity retrieval. The idea is to extend term-based entity retrieval model using a probabilistic approach that links entities in the query. This approach is based on the MRFs, makes it capable of encompassing a number of existing retrieval models. The new component of entity matching, named \textit{Entity Linking incorporate Retrieval} (ELR), can be considered as an extension to MRF retrieval model. One of the key elements of ELR is incorporating entity annotations information into entity linking. TAGME is used to achieve this goal and to annotate the query terms. This work is evaluated using standard retrieval test collection of 500 heterogeneous queries, in terms of MAP. The results show a consistent improvements over all standard language models and state-of-the-art ad-hoc entity retrieval.
+
+
+\section{Application to GoT Project}
+
+The quality of entity retrieval in a query-search scenario can be improved using the techniques explained in the papers. Some of these ideas are, using term dependencies, multi-fielded entity representation, probabilistic based language models (ordered, unordered, unigram, bigram). But, in GoT project, we do not have a query. Unless, we want to create a query out of each name in the form of "is <character> dead?". Then, we can use the idea of multi-fielded entity representation in order to increase the accuracy of the retrieval process. But, I suspect this method only works if we have a big knowledge base with multiple node for each entity. But, one of the biggest challenges that we have in this project is with unlinkables. So, my guess is the improvements after applying this method is not going to be significant.
+
+\bibliographystyle{plain}
+\bibliography{invasive_species}
+
+\end{document}
+
+
+
+
+%===============================
+%========== NOT TO RUN =========
+\iffalse
+
+\begin{equation}\label{eq:lp_dual}
+\begin{mprog}
+\maximize{\mathbf{u}} \mathbf{u}\tr  \mathbf{r} 
+\stc \sum_{a \in \mathcal{A}}(\mathbf{I} - \gamma \mathbf{P}_a)\tr\mathbf{u}_a = \mathbf{p}_0 
+\cs \mathbf{u}_a \geq \mathbf{0}
+\end{mprog}
+\end{equation}
+
+
+\usepackage{titlesec}
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries}   % The style of the section title
+  {}                             % a prefix
+  {0pt}                          % How much space exists between the prefix and the title
+  {Section \thesection:\quad}    % How the section is represented
+
+% Starred variant
+\titleformat{name=\section,numberless}
+  {\normalfont\Large\bfseries}
+  {}
+  {0pt}
+  {}
+  
+
+asdasd \cite{1013341}. Fig.~\ref{Fig_Example}.
+
+{\fontfamily{pcr}\selectfont 
+run files}
+
+\begin{enumerate}
+  \item The labels consists of sequential numbers.
+  \item The numbers starts at 1 with every call to the enumerate environment.
+\end{enumerate}
+
+\begin{itemize}
+
+\end{itemize}
+
+======== HYPERLINK =============
+Find the \texttt{run files} for all variants in \href{https://github.com/SHi-ON/InfoRet/tree/master/results/Assignment_4}{here}
+
+
+====== FIGURES ========
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=.40]{Fig_Example.pdf}
+	\caption{Example.}
+	\label{Fig_Example}
+\end{figure}
+
+\input{second}
+
+========= EQUATIONS =============
+
+\begin{equation}
+\left\|\frac{\partial V}{\partial\mathbf{x}_1}\right\|\left\|\mathbf{x}_1\right\|\leq c_1V\quad \text{for}\; \left\|\mathbf{x}_1\right\|\geq c_2
+\end{equation}
+
+
+============ TABLES =============
+
+\begin{tabular}{ |p{3cm}|p{3cm}|p{3cm}|  }
+\hline
+\multicolumn{3}{|c|}{Country List} \\
+\hline
+Country Name     or Area Name& ISO ALPHA 2 Code &ISO ALPHA 3 \\
+\hline
+Afghanistan & AF &AFG \\
+Aland Islands & AX   & ALA \\
+Albania &AL & ALB \\
+Algeria    &DZ & DZA \\
+American Samoa & AS & ASM \\
+Andorra & AD & AND   \\
+Angola & AO & AGO \\
+\hline
+\end{tabular}
+
+\begin{center}
+\begin{tabular}{ |c|c|c| } 
+ \hline
+ cell1 & cell2 & cell3 \\ 
+ cell4 & cell5 & cell6 \\ 
+ cell7 & cell8 & cell9 \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+
+
+
+\begin{lstlisting}[language=Python, caption=Code's name]
+import numpy as np
+ 
+def incmatrix(genl1,genl2):
+    m = len(genl1)
+    n = len(genl2)
+    M = None #to become the incidence matrix
+    VT = np.zeros((n*m,1), int)  #dummy variable
+\end{lstlisting}
+
+
+
+\begin{verbatim}
+Put your codes here!
+\end{verbatim}
+\fi
